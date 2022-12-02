@@ -77,12 +77,11 @@ namespace CardProject
             
             for (int type = 1; type <= 4; type ++){
                 for (int ca = 2; ca <= 14; ca++){
-                    switch(type){
-                        case 1: type_ = "Hearts";   break;
-                        case 2: type_ = "Diamonds"; break;
-                        case 3: type_ = "Clubs";    break;
-                        case 4: type_ = "Spades";   break;
-                    }
+                    type_ = type == 1 ? "Hearts"   :
+                           (type == 2 ? "Diamonds" :
+                           (type == 3 ? "Clubs"    :
+                           (type == 4 ? "Spades"   : "")));
+
                     value_ = ca == 11 ? "(J)" : 
                             (ca == 12 ? "(Q)" : 
                             (ca == 13 ? "(K)" : 
