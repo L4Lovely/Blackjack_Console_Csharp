@@ -31,29 +31,27 @@ namespace CardProject
             List<string> textRows = new List<string>();
             string text = _text;
             string parseString = "";
-            int stringLength = text.Length - 1;
-            int ii = 0;
-            int rowMul = 0;
+            int textIndex = 0;
            
-            int i_rows = text.Length / _max_Ch;
-            for (int x = 0; x < i_rows; x++){ 
+            int rowsRequired = text.Length / _max_Ch;
+            for (int currentRow = 0; currentRow < rowsRequired; currentRow++){ 
                 if (text.Length > _max_Cw){
-                    for (ii = 0; ii < _max_Cw; ii++){
-                        parseString += text[ii];
+                    for (textIndex = 0; textIndex < _max_Cw; textIndex++){
+                        parseString += text[textIndex];
                     }
                 }
                 else if (text.Length < _max_Cw){
-                    for (ii = 0; ii < text.Length; ii++){
-                        parseString += text[ii];
+                    for (textIndex = 0; textIndex < text.Length; textIndex++){
+                        parseString += text[textIndex];
                     }
                 }
                 textRows.Add(parseString);
                 parseString = "";
-                text = text.Remove(0,ii);
-                ii = 0;
+                text = text.Remove(0,textIndex);
+                textIndex = 0;
             }
             
-            for (int x = 0; x < i_rows; x++){
+            for (int x = 0; x < rowsRequired; x++){
                 Console.SetCursorPosition(_crsbgn_x, _crsbgn_y + x);
                 dlgtx._dlyout(textRows[x]);
             }
