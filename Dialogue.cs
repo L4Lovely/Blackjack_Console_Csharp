@@ -49,7 +49,7 @@ namespace CardProject
             DealerSlots.Add(DealerSlot_0); DealerSlots.Add(DealerSlot_1); DealerSlots.Add(DealerSlot_2); DealerSlots.Add(DealerSlot_3); DealerSlots.Add(DealerSlot_4);
             HandSlots.Add(HandSlot_0); HandSlots.Add(HandSlot_1); HandSlots.Add(HandSlot_2); HandSlots.Add(HandSlot_3); HandSlots.Add(HandSlot_4);
             
-            int handealerActiveSloteSlot = 2; // player active slot
+            int handActiveSloteSlot = 2; // player active slot
             int dealerActiveSlot = 2; // dealer active slot
             
             int pStrength = 0;
@@ -91,8 +91,8 @@ namespace CardProject
 
                 if (input == "h"){
                     _Hand._Cards.Add(_Deck._draw());
-                    dlgtx._drwcrd(HandSlots[handealerActiveSloteSlot].x,HandSlots[handealerActiveSloteSlot].y,"UP",_Hand._Cards[handealerActiveSloteSlot]);
-                    handealerActiveSloteSlot += 1;
+                    dlgtx._drwcrd(HandSlots[handActiveSloteSlot].x,HandSlots[handActiveSloteSlot].y,"UP",_Hand._Cards[handActiveSloteSlot]);
+                    handActiveSloteSlot += 1;
                     _resetCursorPosition();
                     Thread.Sleep(400);
                 }
