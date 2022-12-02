@@ -2,10 +2,10 @@
 
 Compiled and built with C# mono on Debian 10
 
-Features 
-	100% Self-made 
-	Probably not great code structure!! 
-	>>>ORIGINAL ASCII ART<<<< 
+**Features**
+	100% Self-made
+	Probably not great code structure!!
+	>>>ORIGINAL ASCII ART<<<<
 	...and to top it all off: The worst dialogue you might have read!
 
 Class Descriptions / Overview:
