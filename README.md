@@ -22,3 +22,6 @@ Class Descriptions / Overview:
 - Dealer.cs / Hand.cs
 	Containers for the cards of the dealer and the player.
 	Can return the overall value of held cards.
+	
+- Statics.cs
+	All primitive box-drawing methods are stored here.
