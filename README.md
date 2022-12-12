@@ -1,4 +1,4 @@
-# Blackjack_Console_Csharp
+﻿# Blackjack_Console_Csharp
 
 Compiled and built with C# mono on Debian 10
 
@@ -34,4 +34,4 @@ Class Descriptions / Overview:
 	Can return the overall value of held cards.
 	
 - Statics.cs
-	All primitive box-drawing methods are stored here.
+	All primitive box-drawing methods are stored here. 
